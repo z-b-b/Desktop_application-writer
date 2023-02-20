@@ -1,4 +1,4 @@
-// POPPAD TYPER
+/* POPPAD TYPER */
 
 #include <windows.h>
 
@@ -21,11 +21,11 @@
 
 #define BUFFER(x,y) *(pBuffer + y * cxBuffer + x)
 
-char szAppName[] = "PopPad" ; // ˘Ì ÓÂÙÚ ‰ÁÏÂÔ - ‡·
-char szCAppName[] = "Typer" ; // ˘Ì ÓÂÙÚ ‰ÁÏÂÔ - ·Ô
+char szAppName[] = "PopPad" ; // √π√≠ √Æ√•√¥√≤ √§√ß√¨√•√Ø - √†√°
+char szCAppName[] = "Typer" ; // √π√≠ √Æ√•√¥√≤ √§√ß√¨√•√Ø - √°√Ø
 
-LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM) ; // PROC - ‡·
-LRESULT CALLBACK CWndProc (HWND, UINT, WPARAM, LPARAM); // PROC - ·Ô
+LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM) ; // PROC - √†√°
+LRESULT CALLBACK CWndProc (HWND, UINT, WPARAM, LPARAM); // PROC - √°√Ø
 
 int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,
                     PSTR szCmdLine, int iCmdShow)
@@ -55,7 +55,7 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 	 RegisterClassEx (&wndclass);
 
-     hwnd = CreateWindow (szAppName, "PopPad with Typer , Ê‡· & ÁÔ",
+     hwnd = CreateWindow (szAppName, "PopPad with Typer , √¶√†√° & √ß√∞√Ø",
                           WS_OVERLAPPEDWINDOW,
                           GetSystemMetrics (SM_CXSCREEN) / 4,
                           GetSystemMetrics (SM_CYSCREEN) / 4,
@@ -85,7 +85,7 @@ AskConfirmation (HWND hwnd)
                         "PopPad and Typer", MB_YESNO | MB_ICONQUESTION) ;
      }
 
-// PROC - ‡·
+// PROC - √†√°
 LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
      {
      static HWND hwndEdit ;
@@ -217,7 +217,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
      return DefWindowProc (hwnd, iMsg, wParam, lParam) ;
 }
 
-// PROC - ·Ô
+// PROC - √°√Ø
 LRESULT CALLBACK CWndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
      {
      static char *pBuffer = NULL ;
