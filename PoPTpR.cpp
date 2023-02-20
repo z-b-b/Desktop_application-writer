@@ -193,7 +193,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
                          case IDM_ABOUT :
                               MessageBox (hwnd,
-                                   "POPPAD2 (c) Charles Petzold, 1996",
+                                   "POPPAD2",
                                    szAppName, MB_OK | MB_ICONINFORMATION) ;
                               return 0 ;
                          }
