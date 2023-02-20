@@ -21,11 +21,11 @@
 
 #define BUFFER(x,y) *(pBuffer + y * cxBuffer + x)
 
-char szAppName[] = "PopPad" ; // ùí îåôò äçìåï - àá
-char szCAppName[] = "Typer" ; // ùí îåôò äçìåï - áï
+char szAppName[] = "PopPad" ; 
+char szCAppName[] = "Typer" ; 
 
-LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM) ; // PROC - àá
-LRESULT CALLBACK CWndProc (HWND, UINT, WPARAM, LPARAM); // PROC - áï
+LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM) ; 
+LRESULT CALLBACK CWndProc (HWND, UINT, WPARAM, LPARAM); 
 
 int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,
                     PSTR szCmdLine, int iCmdShow)
@@ -55,7 +55,7 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 	 RegisterClassEx (&wndclass);
 
-     hwnd = CreateWindow (szAppName, "PopPad with Typer , æàá & çðï",
+     hwnd = CreateWindow (szAppName, "PopPad with Typer",
                           WS_OVERLAPPEDWINDOW,
                           GetSystemMetrics (SM_CXSCREEN) / 4,
                           GetSystemMetrics (SM_CYSCREEN) / 4,
@@ -85,7 +85,7 @@ AskConfirmation (HWND hwnd)
                         "PopPad and Typer", MB_YESNO | MB_ICONQUESTION) ;
      }
 
-// PROC - àá
+
 LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
      {
      static HWND hwndEdit ;
@@ -217,7 +217,6 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
      return DefWindowProc (hwnd, iMsg, wParam, lParam) ;
 }
 
-// PROC - áï
 LRESULT CALLBACK CWndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
      {
      static char *pBuffer = NULL ;
